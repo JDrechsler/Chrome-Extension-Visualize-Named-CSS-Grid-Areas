@@ -1,0 +1,22 @@
+{
+	"manifest_version": 2,
+	"name": "CSS Grid Area Visualizer",
+	"description": "Visualizes CSS Grid Area Names",
+	"version": "1.0.0",
+	"icons": {
+		"128": "grid_128.png"
+	},
+	"background": {
+		"scripts": [
+			"background.js"
+		],
+		"persistent": true
+	},
+	"browser_action": {
+		"default_title": "Inject!",
+		"default_icon": "grid_19.png"
+	},
+	"permissions": [
+		"activeTab"
+	]
+}

@@ -1,0 +1,24 @@
+header{
+	grid-area: hd;
+	height: 100px;
+}
+
+footer{
+	grid-area: ft;
+	height: 100px;
+}
+
+main{
+	grid-area: main;
+	height: 300px;
+}
+
+.map{
+	grid-area: map;
+	height: 100px;
+}
+
+.options{
+	grid-area: options;
+	height: 100px;
+}

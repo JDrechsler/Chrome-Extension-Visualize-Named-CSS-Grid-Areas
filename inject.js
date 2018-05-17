@@ -29,8 +29,6 @@ function getRandomColor() {
 	for (var i = 0; i < 6; i++) {
 		color += letters[Math.floor(Math.random() * 16)];
 	}
-
-	console.log(getContrast(color.replace('#', '')))
 	return color;
 }
 

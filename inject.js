@@ -16,7 +16,6 @@ function findGridAreas() {
 				let colorString = getRandomColor()
 				do {
 					colorString = getRandomColor()
-					console.log(getContrast(colorString))
 				} while (getContrast(colorString) !== producedColors);
 
 				const areaDiv = createAreaDiv(foundGridArea, colorString)

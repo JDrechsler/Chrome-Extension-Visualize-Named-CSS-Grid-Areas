@@ -1,3 +1,5 @@
+const producedColors = 'dark'
+
 function findGridAreas() {
 	const body = document.getElementsByTagName('body')[0]
 	const bodyChildTags = body.getElementsByTagName('*')
@@ -11,10 +13,11 @@ function findGridAreas() {
 			const foundGridArea = compStyles.gridArea.split(" ")[0]
 			if (foundGridArea !== 'auto') {
 				console.log(`Create gridAreaVisual for ${foundGridArea}`)
-				let colorString = 'FFFFFF'
+				let colorString = getRandomColor()
 				do {
 					colorString = getRandomColor()
-				} while (getContrast(colorString.replace('#', '')) !== 'dark');
+					console.log(getContrast(colorString))
+				} while (getContrast(colorString) !== producedColors);
 
 				const areaDiv = createAreaDiv(foundGridArea, colorString)
 				appendAreaToNode(tag, areaDiv)
@@ -33,6 +36,7 @@ function getRandomColor() {
 }
 
 function getContrast(hexcolor) {
+	hexcolor = hexcolor.replace('#', '')
 	var r = parseInt(hexcolor.substr(0, 2), 16);
 	var g = parseInt(hexcolor.substr(2, 2), 16);
 	var b = parseInt(hexcolor.substr(4, 2), 16);
